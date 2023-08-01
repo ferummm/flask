@@ -1,0 +1,11 @@
+<!DOCTYPE html> 
+    <header>
+        <title> Добавление пользователей </title>
+    </header>
+    <body>
+        <form action="{{form_destination}}" method="post">
+            {% include "users/form.html" %}
+            <input type="submit" value="Add">
+        </form>
+    </body>
+</html> 

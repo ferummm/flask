@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+    <header>
+    <b>Список добавленных пользователей</b>
+    </header>
+    <style>
+        .nobullet {
+         list-style-type: none; 
+        }
+    </style>
+    <body>
+        {% include "users/logout.html" %}
+        <a href="{{back_url}}">Back</a>
+        {% if messages %}
+            <ul class="nobullet">
+                {% for category, message in messages %}
+                    <li class="{{ category }}"><font color="green">{{ message }}</font></li>
+                {% endfor %}
+             </ul>
+        {% endif %}
+        <p><a href="{{new_user_url}}">Add new user</a>
+        <ul>
+            {% for user in users %}
+                <li> <a href="{{url_for(user_handler, id=user.id)}}">{{user.name}}</a> </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

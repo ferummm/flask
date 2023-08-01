@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <header>
+        About user
+    </header>
+    <body>
+        <a href="{{back_url}}">Back</a>
+        {% if messages %}
+            <ul class="nobullet">
+                {% for category, message in messages %}
+                    <li class="{{ category }}"><font color="green">{{ message }}</font></li>
+                {% endfor %}
+             </ul>
+        {% endif %}
+        <div>
+           <label>Name</label>
+           {{user.name}}
+        </div>
+        <div>
+            <label>Email</label>
+            {{user.email}}
+        </div>
+        <form action="{{edit_url}}" method="get">
+            <input type="submit" value="Edit">
+        </form>
+        <form action="{{delete_url}}" method="post" 
+            onsubmit="return confirm('Are you sure you want to delete user? This action cannot be undone.');">
+            <input type="submit" value="Remove">
+        </form>
+    </body>

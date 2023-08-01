@@ -1,0 +1,17 @@
+<!DOCTYPE html> 
+    <header>
+        <title> Поиск пользователей </title>
+    </header>
+    <body>
+        {% include "users/logout.html" %}
+        <a href="{{back_url}}">Back</a>
+        <form action="{{form_destination}}" method="get">
+            <input type="search" name="term" value="{{search}}" onfocus=this.value=''>
+        </form>
+        <ul>
+            {% for name in search_res %}
+                <li> {{name}} </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

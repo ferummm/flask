@@ -1,0 +1,6 @@
+{% if logout_url %}
+<form action="{{logout_url}}" method="post" 
+            onsubmit="return confirm('Are you sure you want to logout?');">
+            <input type="submit" value="Logout">
+</form>
+{% endif %}
