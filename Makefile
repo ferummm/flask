@@ -1,2 +1,2 @@
 start:
-	flask --app example --debug run --port 8000
+	flask --app src/app --debug run --port 8000
