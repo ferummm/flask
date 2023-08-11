@@ -1,1 +1,1 @@
-This is my test project on flask. There are a search page and a page with a list of users stored in cookies with a bunch of options for adding, editing and deleting users. Also here is a simple mocking authorization by email.
+This is my test project on flask. There are a search page and a page with a list of users stored in cookies with a bunch of options for adding, editing and deleting users. Also here is a simple mocking authorization by email. 
